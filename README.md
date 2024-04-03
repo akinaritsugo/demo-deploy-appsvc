@@ -17,8 +17,7 @@
     TENANT_ID       = "<YOUR_TENANT_ID>"
     SUBSCRIPTION_ID = "<YOUR_SUBSCRIPTION_ID>"
     location        = "eastus"
-    prj             = "z-appsvc"
-    env             = "test"
+    prefix          = "z-appsvc-test"
     sku             = "P1v3"
     ```
 

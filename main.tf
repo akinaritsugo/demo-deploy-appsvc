@@ -15,3 +15,22 @@ provider "azurerm" {
   tenant_id       = var.TENANT_ID
   subscription_id = var.SUBSCRIPTION_ID
 }
+
+resource "random_string" "uniquekey" {
+  length  = 6
+  lower   = true
+  upper   = false
+  numeric = true
+  special = false
+}
+
+module "appservice" {
+  source = "./modules/appservice"
+
+  SUBSCRIPTION_ID = var.SUBSCRIPTION_ID
+  TENANT_ID       = var.TENANT_ID
+  location        = var.location
+  prj             = var.prefix
+  env             = random_string.uniquekey.result
+  sku             = var.sku
+}

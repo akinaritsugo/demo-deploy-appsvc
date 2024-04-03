@@ -2,10 +2,12 @@
 # ------------------------------------------
 variable "SUBSCRIPTION_ID" {
   type = string
+  description = "Azure Subscription Id"
 }
 
 variable "TENANT_ID" {
   type = string
+  description = "Azure Tenant Id"
 }
 
 # Resouce Information
@@ -15,12 +17,15 @@ variable "location" {
   default = "japaneast"
 }
 
-variable "prefix" {
-  type    = string
-  default = "z-appsvc-test"
+variable "prj" {
+  type = string
+}
+
+variable "env" {
+  type = string
 }
 
 variable "sku" {
-  type    = string
+  type = string
   default = "B1"
 }
