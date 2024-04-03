@@ -1,15 +1,3 @@
-# Account Information
-# ------------------------------------------
-variable "SUBSCRIPTION_ID" {
-  type = string
-  description = "Azure Subscription Id"
-}
-
-variable "TENANT_ID" {
-  type = string
-  description = "Azure Tenant Id"
-}
-
 # Resouce Information
 # ------------------------------------------
 variable "location" {

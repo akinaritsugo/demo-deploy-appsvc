@@ -25,12 +25,12 @@ resource "random_string" "uniquekey" {
 }
 
 module "appservice" {
+  for_each = var.location_map
+
   source = "./modules/appservice"
 
-  SUBSCRIPTION_ID = var.SUBSCRIPTION_ID
-  TENANT_ID       = var.TENANT_ID
-  location        = var.location
-  prj             = var.prefix
-  env             = random_string.uniquekey.result
-  sku             = var.sku
+  location = each.value
+  prj      = var.prefix
+  env      = random_string.uniquekey.result
+  sku      = var.sku
 }

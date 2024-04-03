@@ -14,11 +14,29 @@
     内容は以下の通り。
 
     ```
-    TENANT_ID       = "<YOUR_TENANT_ID>"
-    SUBSCRIPTION_ID = "<YOUR_SUBSCRIPTION_ID>"
-    location        = "eastus"
-    prefix          = "z-appsvc-test"
-    sku             = "P1v3"
+    TENANT_ID       = "YOUR_TENANT_ID"
+    SUBSCRIPTION_ID = "YOUR_SUBSCRIPTION_ID"
+
+    location_map = {
+      "us1"   = "eastus"
+      "us2"   = "eastus2"
+      "us3"   = "southcentralus"
+      "us4"   = "westus2"
+      "us5"   = "westus3"
+      "us6"   = "centralus"
+      "apac1" = "australiaeast"
+      "apac2" = "southeastasia"
+      "apac3" = "centralindia"
+      "apac4" = "eastasia"
+      "apac5" = "japaneast"
+      "apac6" = "koreacentral"
+      "eu1"   = "northeurope"
+      "eu1"   = "swedencentral"
+      "eu1"   = "uksouth"
+      "eu1"   = "westeurope"
+    }
+    prefix       = "z-appsvc-test"
+    sku          = "P1v3"
     ```
 
 ## リソースデプロイ

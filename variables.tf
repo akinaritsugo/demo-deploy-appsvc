@@ -24,3 +24,11 @@ variable "sku" {
   type    = string
   default = "B1"
 }
+
+variable "location_map" {
+  type = map(string)
+  default = {
+    "us1"   = "eastus"
+    "apac5" = "japaneast"
+  }
+}

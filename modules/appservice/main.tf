@@ -8,10 +8,3 @@ terraform {
 
   required_version = ">= 1.1.0"
 }
-
-provider "azurerm" {
-  features {}
-
-  tenant_id       = var.TENANT_ID
-  subscription_id = var.SUBSCRIPTION_ID
-}
